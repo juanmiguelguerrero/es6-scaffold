@@ -28,6 +28,9 @@
     "gulp-watch": "^4.3.11",
     "mocha": "^3.5.0",
     "vinyl-source-stream": "^1.1.0",
-	"gulp-nunjucks-render": "^2.2.1"
+    "gulp-nunjucks-render": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
   }
 }

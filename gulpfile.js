@@ -15,7 +15,7 @@ gulp.task('connect', function() {
 	connect.server({
 		base: 'http://localhost',
 		port: 8080,
-		root: './dist',
+		root: './public',
 		livereload: true
 	});
 });
@@ -24,7 +24,7 @@ gulp.task('css', function() {
     gulp.src('./scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./public/css'))
         .pipe(connect.reload());
 });
 
@@ -33,7 +33,7 @@ gulp.task('js', function() {
 		.transform(babelify)
 		.bundle()
 		.pipe(source('main.js'))
-		.pipe(gulp.dest('./dist/js'))
+		.pipe(gulp.dest('./public/js'))
 		.pipe(connect.reload());
 });
 
@@ -42,13 +42,13 @@ gulp.task('html', function() {
 	.pipe(nunjucks({
 		path: ['./src/templates']
 	  }))
-	.pipe(gulp.dest('./dist'))
+	.pipe(gulp.dest('./public'))
 	.pipe(connect.reload());
 });
 
 
 gulp.task("clean", function () {
-  return del("./dist/*.html");
+  return del("./public/*.html");
 });
 
 gulp.task('watch', function() {
@@ -60,7 +60,7 @@ gulp.task('watch', function() {
 	// Fuerza la tarea cuando se crea un nuevo archivo html
 	// watch('src/**/*.html', function () {
 	// 	gulp.src('./src/**/*.html')
-	// 		.pipe(gulp.dest('./dist'))
+	// 		.pipe(gulp.dest('./public'))
 	// 		.pipe(connect.reload());
     // });
 });
