@@ -2,7 +2,7 @@
   "name": "es6-scaffold",
   "version": "0.1.0",
   "description": "Proyecto base con estructuras y tareas automatizadas en gulp para trabajar en javascript ES6",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
