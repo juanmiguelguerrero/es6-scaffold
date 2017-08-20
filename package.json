@@ -20,15 +20,20 @@
     "browserify": "^14.4.0",
     "chai": "^4.1.1",
     "del": "^3.0.0",
+    "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
     "gulp-connect": "^5.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
+    "merge-stream": "^1.0.1",
     "mocha": "^3.5.0",
-    "vinyl-source-stream": "^1.1.0",
-    "gulp-nunjucks-render": "^2.2.1"
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "express": "^4.15.4"
